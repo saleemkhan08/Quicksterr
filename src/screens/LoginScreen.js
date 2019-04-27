@@ -75,7 +75,7 @@ export class LoginScreen extends Component {
     }
   };
 
-  componentDidMount() {}
+  componentDidMount() { }
 
   render() {
     return (
@@ -85,10 +85,10 @@ export class LoginScreen extends Component {
       >
         <ScrollView contentContainerStyle={styles.container}>
           <Image
-            source={require("../../assets/icon.png")}
+            source={require("../../assets/placeholder.png")}
             style={styles.drawerImage}
           />
-          <Text style={styles.title}> Medro </Text>
+          <Text style={styles.title}> Quicksterr </Text>
 
           <View style={styles.formContainer}>
             <Item floatingLabel>
@@ -136,8 +136,8 @@ export class LoginScreen extends Component {
                   />
                 </View>
               ) : (
-                <Text>LOGIN</Text>
-              )}
+                  <Text>LOGIN</Text>
+                )}
             </Button>
             <Button
               full
@@ -158,8 +158,8 @@ export class LoginScreen extends Component {
 }
 const styles = StyleSheet.create({
   drawerImage: {
-    height: 80,
-    width: 80
+    height: 200,
+    width: 200
   },
   formContainer: {
     padding: 20,

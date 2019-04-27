@@ -55,7 +55,7 @@ export class CategoryDrawer extends Component {
               source={require("../../../assets/icon.png")}
               style={styles.drawerImage}
             />
-            <Text style={styles.title}>MEDRO</Text>
+            <Text style={styles.title}>Quicksterr</Text>
             <Text style={{ textAlign: "center" }}>{this.state.user.email}</Text>
           </View>
           <AddCategoryDialog
@@ -144,8 +144,8 @@ export class CategoryDrawer extends Component {
 
 const styles = StyleSheet.create({
   drawerImage: {
-    height: 60,
-    width: 60
+    height: 100,
+    width: 100
   },
   rowItem: {
     padding: 0

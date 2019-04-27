@@ -17,7 +17,7 @@ export class ProductListScreen extends Component {
         <ProductListHeader
           action={ADD_PRODUCT}
           onActionClicked={navigation.getParam("onActionClicked")}
-          title={"Medro"}
+          title={"Quicksterr"}
           openMenu={navigation.getParam("onMenuClicked")}
         />
       ),

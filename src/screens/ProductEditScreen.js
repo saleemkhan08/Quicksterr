@@ -24,8 +24,7 @@ class ProductEditScreen extends Component {
     name: "",
     description: "",
     price: "",
-    flipkart: "",
-    amazon: ""
+    location: "",
   };
 
   static navigationOptions = () => {
@@ -97,22 +96,9 @@ class ProductEditScreen extends Component {
               </Item>
               <Item style={{ marginTop: 5, marginEnd: 15 }}>
                 <Input
-                  placeholder="Flipkart Link"
-                  onChangeText={text => this.setState({ flipkart: text })}
-                  value={this.state.flipkart}
-                />
-              </Item>
-              <Item
-                style={{
-                  marginTop: 5,
-                  marginBottom: 0,
-                  marginEnd: 15
-                }}
-              >
-                <Input
-                  placeholder="Amazon Link"
-                  onChangeText={text => this.setState({ amazon: text })}
-                  value={this.state.amazon}
+                  placeholder="Product Location"
+                  onChangeText={text => this.setState({ location: text })}
+                  value={this.state.location}
                 />
               </Item>
             </Form>

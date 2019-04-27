@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { StyleSheet, Image } from "react-native";
+import { StyleSheet, Image, SafeAreaView } from "react-native";
 import { Text, View } from "native-base";
 import { firebaseAuth } from "../store";
+
 export class LoadingScreen extends Component {
   componentDidMount() {
     firebaseAuth.onAuthStateChanged(user => {
@@ -14,15 +15,16 @@ export class LoadingScreen extends Component {
       }, 900);
     });
   }
+
   render() {
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <Image
-          source={require("../../assets/icon.png")}
+          source={require("../../assets/placeholder.png")}
           style={styles.drawerImage}
         />
-        <Text style={styles.title}> Medro </Text>
-      </View>
+        <Text style={styles.title}> Quicksterr </Text>
+      </SafeAreaView>
     );
   }
 }
@@ -33,8 +35,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   },
   drawerImage: {
-    height: 80,
-    width: 80
+    height: 200,
+    width: 200
   },
   container: {
     flex: 1,

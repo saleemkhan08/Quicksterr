@@ -79,10 +79,10 @@ export class ProductList extends Component {
             {products.length > 0 ? (
               this.loadProducts(products)
             ) : (
-              <EmptyListMessage
-                message={isLoading ? "Loading..." : "No Products Found"}
-              />
-            )}
+                <EmptyListMessage
+                  message={isLoading ? "Loading..." : "No Products Found"}
+                />
+              )}
           </List>
         </ScrollView>
       </SafeAreaView>
@@ -147,29 +147,14 @@ export class ProductList extends Component {
             </TouchableOpacity>
           </CardItem>
           <CardItem cardBody>{this.showImage(product)}</CardItem>
-          <CardItem footer>
-            <Text>Buy This On:</Text>
+          <CardItem footer style={{ alignContent: "center", justifyContent: "center" }}>
             <Button
               rounded
               bordered
               info
-              style={{ margin: 10 }}
-              onPress={() => {
-                Linking.openURL(product.amazon);
-              }}
+              style={{ margin: 10, width: "90%" }}
             >
-              <Text>Amazon</Text>
-            </Button>
-            <Button
-              rounded
-              bordered
-              info
-              style={{ margin: 10 }}
-              onPress={() => {
-                Linking.openURL(product.flipkart);
-              }}
-            >
-              <Text>Flipkart</Text>
+              <Text style={{ textAlign: "center", width: "100%" }}>Add to cart</Text>
             </Button>
           </CardItem>
         </Card>

@@ -12,12 +12,12 @@ import {
   createDrawerNavigator,
   createStackNavigator
 } from "react-navigation";
+import { StatusBar } from "react-native";
 import { store } from "./src/store";
 import { Provider } from "react-redux";
 import ProductEditScreen from "./src/screens/ProductEditScreen";
 import ProductImagesScreen from "./src/screens/ProductImagesScreen";
 import { YellowBox } from "react-native";
-
 const StackNavigator = createStackNavigator({
   ProductListScreen,
   ProductEditScreen,
@@ -65,12 +65,20 @@ export default class App extends React.Component {
     if (this.state.isLoading) {
       return (
         <Root>
+          <StatusBar
+            barStyle="dark-content"
+            backgroundColor="#ffffff"
+          />
           <View />
         </Root>
       );
     }
     return (
       <Root>
+        <StatusBar
+          barStyle="dark-content"
+          backgroundColor="#ffffff"
+        />
         <Provider store={store}>
           <AppContainer />
         </Provider>
